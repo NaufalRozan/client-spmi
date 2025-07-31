@@ -150,7 +150,7 @@ export const laporanColumn: ColumnDef<Laporan>[] = [
 
             return (
                 <div>
-                    {userInfo?.role?.name === "Auditor" && (
+                    {userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" && (
                         <div>
                             <TooltipProvider>
                                 <Tooltip>
@@ -203,7 +203,7 @@ export const laporanColumn: ColumnDef<Laporan>[] = [
                             </AlertDialog>
                         </div>
                     )}
-                    {userInfo?.role?.name !== "Auditor" && (
+                    {userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT" && (
                         < AlertDialog >
                             <DropdownMenu>
                                 <DropdownMenuTrigger asChild>

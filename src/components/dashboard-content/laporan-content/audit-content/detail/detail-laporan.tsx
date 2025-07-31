@@ -151,8 +151,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                             placeholder="0.0"
                                             {...field}
                                             defaultValue={laporan?.capaian_auditor}
-                                            readOnly={laporan?.isApproved === true || userInfo?.role?.name !== "Auditor"}
-                                            className={`${userInfo?.role?.name !== "Auditor" ? "bg-gray-200" : ""}`}
+                                            readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT"}
+                                            className={`${userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -170,8 +170,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                             placeholder="Isi RTL Auditor..."
                                             {...field}
                                             defaultValue={laporan?.rtl_auditor}
-                                            readOnly={laporan?.isApproved === true || userInfo?.role?.name !== "Auditor"}
-                                            className={`min-h-[150px] ${userInfo?.role?.name !== "Auditor" ? "bg-gray-200" : ""}`}
+                                            readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT"}
+                                            className={`min-h-[150px] ${userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -189,8 +189,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                             placeholder="Isi Komentar..."
                                             {...field}
                                             defaultValue={laporan?.komentar}
-                                            readOnly={laporan?.isApproved === true || userInfo?.role?.name !== "Auditor"}
-                                            className={`min-h-[150px] ${userInfo?.role?.name !== "Auditor" ? "bg-gray-200" : ""}`}
+                                            readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT"}
+                                            className={`min-h-[150px] ${userInfo?.role?.permissions[0].name !== "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -221,8 +221,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                                     placeholder="0.0"
                                                     {...field}
                                                     value={field.value ?? ""}
-                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.name === "Auditor"}
-                                                    className={`${userInfo?.role?.name === "Auditor" ? "bg-gray-200" : ""}`}
+                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT"}
+                                                    className={`${userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -242,8 +242,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                                     placeholder="Isi kendala..."
                                                     {...field}
                                                     defaultValue={laporan?.kendala}
-                                                    className={`min-h-[150px] ${userInfo?.role?.name === "Auditor" ? "bg-gray-200" : ""}`}
-                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.name === "Auditor"}
+                                                    className={`min-h-[150px] ${userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
+                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT"}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -263,8 +263,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                                     placeholder="Isi perbaikan..."
                                                     {...field}
                                                     defaultValue={laporan?.perbaikan}
-                                                    className={`min-h-[150px] ${userInfo?.role?.name === "Auditor" ? "bg-gray-200" : ""}`}
-                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.name === "Auditor"}
+                                                    className={`min-h-[150px] ${userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
+                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT"}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -284,8 +284,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                                     placeholder="Isi RTL..."
                                                     {...field}
                                                     defaultValue={laporan?.rtl}
-                                                    className={`min-h-[150px] ${userInfo?.role?.name === "Auditor" ? "bg-gray-200" : ""}`}
-                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.name === "Auditor"}
+                                                    className={`min-h-[150px] ${userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
+                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT"}
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -305,8 +305,8 @@ export default function DetailLaporanContent({ id }: { id: string }) {
                                                     placeholder="Isi PIC..."
                                                     {...field}
                                                     defaultValue={laporan?.pic}
-                                                    className={`min-h-[150px] ${userInfo?.role?.name === "Auditor" ? "bg-gray-200" : ""}`}
-                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.name === "Auditor"}
+                                                    className={`min-h-[150px] ${userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT" ? "bg-gray-200" : ""}`}
+                                                    readOnly={laporan?.isApproved === true || userInfo?.role?.permissions[0].name === "ASSESOR_AUDIT"}
                                                 />
                                             </FormControl>
                                             <FormMessage />
